@@ -1,3 +1,9 @@
 $(document).ready(function(){
-  // your code goes here.
+  $(".style_it").click(function (event) {
+    event.preventDefault()
+    let selector = $("input#selector").val()
+    let property = $("input#property").val()
+    let value = $("input#value").val()
+    $(selector).css(property, value)
+  });
 });
